@@ -6,16 +6,16 @@
 <p>It's tempting to skim over documentation to get an overview of how a particular library, framework, or component functions and begin to implement a feature right away. The problem with doing this is that the devil is in the details when it comes to development and it's likely your use of the third party functionality conflicts with how it was designed to be used, causing inconsistencies and ultimately hard to maintain code. Some specific issues include:</p>
 <ul>
   <li>
-    <b>Your use may be inconsistent with the original design.</b>
+    <b>Your use may be inconsistent with the original design</b>
     <p>The typical issue here is that a feature is implemented using a library but some alternative to the default behavior of the library is required. If you're not aware of what functionality the library provides the temptation is to override the library's behavior in some way which usually results in a workaround which is hard to maintain and, potentially, multiple workarounds which are exponentially harder to maintain.</p>
     <p>The effect is instead of code that flows simply from beginning to end like A -> B -> C, where B is the functionality we should have used, we have a flow like A -> D -> F -> E -> C, where D, E, and F are our workarounds. Making the situation worse in my experience is that these workarounds tend to refer to each other cyclically, where D, E, and F may refer to each other and change properties of each other, resulting in even harder to maintain code.</p>
   </li>
   <li>
-    <b>Your may wind up "programming through permutation".</b>
+    <b>Your may wind up "programming through permutation"</b>
     <p>This happens when you're implementing a feature and have sub-tasks A, B, C, and D. Task A gets implemented with minimal reading of the documentation, task B requires a little more reading of the documentation and some small changes to A, implementing C requires more reading and large changes to A and B, and so on.</p>
   </li>
   <li>
-    <b>You may reimplement functionality that already exists (reinventing the wheel).</b>
+    <b>You may reimplement functionality that already exists (reinventing the wheel)</b>
     <p>If some third party has published a library or framework it's typically the case that related functionality will be provided (e.g., a math library will contain constants, types, and operations on those types). The developer of that library should provide ongoing support and bug fixes for it (and if they don't, tread carefully), so they have already made the commitment to updating and maintaining it, saving you the trouble.</p>
     <p>Reimplementing functionality means that you are now responsible for the time spent developing, maintaining, and fixing issues with the reimplemented functionality. In short, life's hard enough. Why make it harder?</p>
   </li>
@@ -28,7 +28,7 @@
 <p>This method involves taking the requirements for a feature and immediately going to work on implementing them without having a complete picture, either because the requirements or your understanding of them is incomplete, or your understanding of how the feature will need to be implemented is incomplete from a technical perspective. There are three outcomes to this method:</p>
 <ul>
   <li>
-    <b>Failure.</b>
+    <b>Failure</b>
     <p>A common outcome. The feature wasn't implemented on time, or is only partially working.</p>
   </li>
   <li>
@@ -36,7 +36,7 @@
     <p>In this outcome, the implementation is complete and meets the requirements but the code is a complete mess. It suffers from poor abstractions, tight coupling, unnecessary dependencies, and the flow is difficult to follow. This outcome essentially kicks the cost of development down the road, where maintaining it will cost more than it should.</p>
   </li>
   <li>
-    <b>The implementation is complete.</b>
+    <b>The implementation is complete</b>
     <p>Through sheer dumb luck. Doesn't happen much.</p>
   </li>
 </ul>
@@ -45,25 +45,25 @@
 <p>The second method involves careful understanding of the requirements and formulating a clear plan on how to satisfy those requirements through your implementation. The steps typically look like:</p>
 <ol>
   <li>
-    <b>Gather requirements.</b>
+    <b>Gather requirements</b>
     <p>This involves gathering as much information as you can from stakeholders and getting a clear picture of what needs to be done. This step is crucial, so keep going into the details until you've reached the level of detail where that level no longer provides any more benefit.</p>
   </li>
   <li>
-    <b>Consider the implementation.</b>
+    <b>Consider the implementation</b>
     <p>Think about how the requirements can be satisfied by the implementation. What behaviors need to be modeled? What abstractions represent the desired functionality effectively? What types need to be defined? What operations need to be defined? What algorithms will I use or need to define? What data structures will I use or need to define? What existing third party code can I leverage in the implementation?</p>
     <p>Software design is outside the scope of this article, but this is where good design comes into play.</p>
   </li>
   <li>
-    <b>Prototype.</b>
+    <b>Prototype</b>
     <p>Mock up a simple version of the implementation. This helps to define details of the requirements and implementation that may have been missed, as well as expose deficiencies in the implementation as they relate to software design.</p>
   </li>
   <li>
-    <b>Repeat Steps 1-3 as required.</b>
+    <b>Repeat Steps 1-3 as required</b>
     <p>The implementation is rarely right the first time.</p>
     <p>The more times step 3 is repeated, the closer it goes from 'simple version' to a complete implementation.</p>
   </li>
   <li>
-    <b>Implement and submit.</b>
+    <b>Implement and submit</b>
     <p>Proceed with the implementation.</p>
   </li>
 </ol>
@@ -93,11 +93,11 @@
 <p>Without exception, improvement needs to be constant and ongoing as a software developer and a tourist mindset makes this process natural. My suggestions for enacting this mindset include:</p>
 <ul>
   <li>
-    <b>Stay active in developer communities.</b>
+    <b>Stay active in developer communities</b>
     <p>Social media, Q&A sites, and websites of other developers all contain a wealth of (free!) information and discussion, so take advantage of it.</p>
   </li>
   <li>
-    <b>Read more code than write.</b>
+    <b>Read more code than write</b>
     <p>You'll be exposed to all kinds of ideas you otherwise wouldn't have come across but also get a chance to see how other developers (some with decades of experience) approach a problem.</p>
   </li>
 </ul>
@@ -120,7 +120,7 @@
   <li>"The button doesn't trigger a signal when the enter key is pressed."</li>
   <li>"The button doesn't trigger a signal when the enter key is pressed because we aren't handling the enter key the same as we are the return key."</li>
 </ul>
-<p>A simple example for sure, but you can see that the issue being communicated becomes decreasing ambiguous as more detail is added. As a bonus, if you can articulate and communicate a problem properly you can usually find a solution, as we did here.</p>
+<p>A simple example for sure, but you can see that the issue being communicated becomes decreasingly ambiguous as more detail is added. As a bonus, if you can articulate and communicate a problem properly you can usually find a solution, as we did here.</p>
 <p>Presenting a problem to a senior developer or manager is something you'll need to do from time to time, and someone who can report a problem unambiguously will certainly be favored over someone who can't. Someone who can report a problem <b>and</b> suggest a solution is favored 10 times more.</p>
 </br>
 
